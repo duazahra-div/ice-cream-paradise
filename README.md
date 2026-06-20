@@ -42,6 +42,9 @@ Contact ⭐
 <img width="1882" height="883" alt="7" src="https://github.com/user-attachments/assets/8fdcc8e3-2b7d-433e-9d14-e0388370a580" />
 
 ---
+Live Demo ⭐
+https://duazahra-div.github.io/ice-cream-paradise/
+
 
 📌 Note:
 This is a practice project and not a live commercial business website.
