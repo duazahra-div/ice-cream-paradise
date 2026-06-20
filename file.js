@@ -1,11 +1,3 @@
-/* ==========================================================================
-   Parallax Starter - Free HTML CSS Template
-
-TemplateMo 612 Parallax Starter
-
-https://templatemo.com/tm-612-parallax-starter
-
-   ========================================================================== */
 
 (function () {
     'use strict';
@@ -23,18 +15,7 @@ https://templatemo.com/tm-612-parallax-starter
     var isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
                    || window.innerWidth <= 768;
 
-    // =============================================
-    // Smooth Parallax Engine
-    // =============================================
-    // How it works:
-    // - Each .parallax-bg is 200% the height of the viewport
-    //   and offset by -50% so there's plenty of image above
-    //   and below to translate into.
-    // - As the user scrolls, we calculate how far the section
-    //   midpoint is from the viewport center (a value from -1 to +1).
-    // - We multiply that by a large pixel range (half the viewport height)
-    //   so the background shifts dramatically relative to the content.
-    // - data-speed controls intensity: 0.5 = half viewport travel range.
+
 
     var ticking = false;
 
