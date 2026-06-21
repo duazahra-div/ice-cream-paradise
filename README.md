@@ -53,3 +53,4 @@ This is a practice project and not a live commercial business website.
 
 👩‍💻 Developed By:
 Dua Zahra – Front-End Web Developer
+GitHub: https://github.com/duazahra-div
