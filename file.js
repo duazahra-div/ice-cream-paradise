@@ -12,8 +12,7 @@
     var revealElements = document.querySelectorAll('.section-content');
 
     // --- Detect mobile ---
-    var isMobile = /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-                   || window.innerWidth <= 768;
+    var isMobile = false;
 
 
 
@@ -82,7 +81,7 @@
 
     // Recalculate on resize
     window.addEventListener('resize', function () {
-        isMobile = window.innerWidth <= 768;
+        isMobile = false;
         if (!isMobile) {
             updateParallax();
         } else {
