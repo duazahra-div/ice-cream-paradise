@@ -104,10 +104,12 @@
     handleNavScroll();
 
     // --- Mobile Toggle ---
+    if (navToggle && navLinks) {
     navToggle.addEventListener('click', function () {
         navToggle.classList.toggle('active');
         navLinks.classList.toggle('open');
     });
+}
 
     navItems.forEach(function (link) {
         link.addEventListener('click', function () {
