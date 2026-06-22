@@ -63,6 +63,7 @@ img {
     border: 1px solid rgba(255,255,255,0.15);
     box-shadow: 0 8px 30px rgba(0,0,0,0.2);
     transition: all 0.4s ease;
+    z-index: 999999 !important;
 }
 
     #templatemo-nav.scrolled {
@@ -156,20 +157,26 @@ img {
     }
 
     .nav-links {
-        position: absolute;
-        top: 80px;
-        right: 0;
-        flex-direction: column;
-        width: 220px;
-        background: rgba(0,0,0,0.85);
-        backdrop-filter: blur(10px);
-        padding: 20px;
-        border-radius: 15px;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: 0.3s;
-    }
+    position: fixed !important;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0,0,0,0.95);
+    padding: 20px;
+    border-radius: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999999;
+    transition: 0.3s ease;
+}
+
+.nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
         .nav-links.active {
             opacity: 1;
@@ -215,6 +222,7 @@ img {
     inset: 0;
     background: rgba(0, 0, 0, 0.42);
     z-index: 1;
+    pointer-events: none;
 }
 
 .parallax-overlay.overlay-dark {
@@ -428,11 +436,11 @@ img {
 .service-item img {
     width: 100%;
     max-width: 220px;
-    height: 160px;
     object-fit: contain;
     border-radius: 12px;
     margin: 12px 0;
     transition: transform 0.3s ease;
+    height: auto;
 }
 
 /* image hover zoom */
@@ -1017,38 +1025,5 @@ img {
         color: #111;
         transform: translateY(-4px);
     }
-@media (max-width: 768px) {
 
-    .nav-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 20px 0;
-        background: rgba(0,0,0,0.95);
-
-        display: none;
-        border-radius: 20px;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-container {
-        padding: 0 20px;
-    }
-
-    .nav-logo {
-        font-size: 14px;
-        letter-spacing: 1px;
-    }
-}
 
