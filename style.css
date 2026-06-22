@@ -1,4 +1,3 @@
-/* --- CSS Variables --- */
 :root {
     --font-heading: 'Oswald', sans-serif;
     --font-body: 'Source Sans 3', sans-serif;
@@ -6,14 +5,17 @@
     --white: #ffffff;
     --white-90: rgba(255, 255, 255, 0.9);
     --white-70: rgba(255, 255, 255, 0.7);
-    --white-40: rgba(255, 255, 255, 0.4);
 }
 
-/* --- RESET --- */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,7 +45,6 @@ img {
     border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* container */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -52,7 +53,6 @@ img {
     height: 65px;
 }
 
-/* logo */
 .nav-logo {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -60,7 +60,6 @@ img {
     color: white;
 }
 
-/* links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -78,13 +77,13 @@ img {
     color: #fff;
 }
 
-/* toggle */
 .nav-toggle {
     display: none;
     flex-direction: column;
     gap: 5px;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .nav-toggle span {
@@ -116,10 +115,6 @@ img {
     .nav-links.open {
         display: flex;
     }
-
-    .nav-container {
-        padding: 0 20px;
-    }
 }
 
 /* ================= PARALLAX ================= */
@@ -132,7 +127,7 @@ img {
     justify-content: center;
 }
 
-/* FIX: CLICK ISSUE */
+/* IMPORTANT FIX: CLICK BLOCK ISSUE */
 .parallax-overlay {
     position: absolute;
     inset: 0;
@@ -141,18 +136,17 @@ img {
     pointer-events: none;
 }
 
-/* FIX: IMAGE ISSUE */
+/* IMAGE FIX */
 .parallax-bg {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center;
     z-index: 0;
+    transform: none !important;
 }
 
-/* content */
+/* CONTENT */
 .section-content {
     position: relative;
     z-index: 2;
@@ -187,7 +181,7 @@ img {
     text-align: center;
 }
 
-/* FIX IMAGES */
+/* IMAGE FIX */
 .service-item img {
     width: 100%;
     height: auto;
@@ -208,7 +202,7 @@ img {
     }
 }
 
-/* ================= FORM ================= */
+/* ================= FORMS ================= */
 
 .form-row {
     display: flex;
@@ -239,5 +233,4 @@ img {
 .testimonial.active {
     display: block;
 }
-
 
